@@ -12,6 +12,8 @@
 		7C4B31A922649F3E00DB2B44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B31A722649F3E00DB2B44 /* Main.storyboard */; };
 		7C4B31AB22649F3F00DB2B44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B31AA22649F3F00DB2B44 /* Assets.xcassets */; };
 		7C4B31AE22649F3F00DB2B44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B31AC22649F3F00DB2B44 /* LaunchScreen.storyboard */; };
+		7C4B31B62264A10400DB2B44 /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4B31B52264A10400DB2B44 /* Storyboard2.storyboard */; };
+		7C4B31B82264A2B600DB2B44 /* CustomTransitionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4B31B72264A2B600DB2B44 /* CustomTransitionsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7C4B31AA22649F3F00DB2B44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4B31AD22649F3F00DB2B44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4B31AF22649F3F00DB2B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C4B31B52264A10400DB2B44 /* Storyboard2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard2.storyboard; sourceTree = "<group>"; };
+		7C4B31B72264A2B600DB2B44 /* CustomTransitionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				7C4B31A322649F3E00DB2B44 /* AppDelegate.swift */,
 				7C4B31A522649F3E00DB2B44 /* ViewController.swift */,
+				7C4B31B72264A2B600DB2B44 /* CustomTransitionsManager.swift */,
+				7C4B31B52264A10400DB2B44 /* Storyboard2.storyboard */,
 				7C4B31A722649F3E00DB2B44 /* Main.storyboard */,
 				7C4B31AA22649F3F00DB2B44 /* Assets.xcassets */,
 				7C4B31AC22649F3F00DB2B44 /* LaunchScreen.storyboard */,
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B31B62264A10400DB2B44 /* Storyboard2.storyboard in Resources */,
 				7C4B31AE22649F3F00DB2B44 /* LaunchScreen.storyboard in Resources */,
 				7C4B31AB22649F3F00DB2B44 /* Assets.xcassets in Resources */,
 				7C4B31A922649F3E00DB2B44 /* Main.storyboard in Resources */,
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4B31B82264A2B600DB2B44 /* CustomTransitionsManager.swift in Sources */,
 				7C4B31A622649F3E00DB2B44 /* ViewController.swift in Sources */,
 				7C4B31A422649F3E00DB2B44 /* AppDelegate.swift in Sources */,
 			);
