@@ -46,12 +46,13 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.cellForItem(at: indexPath)
         
-        transitions.cell = cell
-        
+        transitions.cell = cell as? CollectionViewCell
+        transitions.frame = cell?.frame
         if let image = images[indexPath.row] {
             presenter.showSecondVC(with: image)
+            transitions.image.image = image
         }
     }
     
@@ -65,6 +66,7 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
 
             if let image = sender as? UIImage {
                 secondVC.image = image
+                
             }
         }
     }
@@ -86,6 +88,17 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
         return transitions
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch: UITouch! = touches.first! as UITouch
+        transitions.touch = touch.location(in: self.view)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        var touch : UITouch! =  touches.first! as UITouch
+        transitions.touch = touch.location(in: self.view)
+    }
     
     @IBAction func unwindToViewController(_ sender: UIStoryboardSegue) { }
 }
