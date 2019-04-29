@@ -21,7 +21,8 @@ class CustomTransitionsManager: NSObject, UIViewControllerAnimatedTransitioning 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         guard let toView = transitionContext.view(forKey: .to),
-            let fromView = transitionContext.view(forKey: .from)
+            let fromView = transitionContext.view(forKey: .from),
+            let toViewSnapShot = toView.snapshotView(afterScreenUpdates: true)
             else {
                 
                 transitionContext.completeTransition(false)
@@ -29,43 +30,34 @@ class CustomTransitionsManager: NSObject, UIViewControllerAnimatedTransitioning 
         }
         
         let containerView = transitionContext.containerView
-        
-        var frame = cell.frame
-        frame.origin.y = 0.5
-        frame.origin.x = 0.5
-        frame.size.width = containerView.frame.size.width
-        frame.size.height = containerView.frame.size.width
-        
         containerView.backgroundColor = .white
         
         let beginState = CGAffineTransform(scaleX: 0, y: 0)
         let endState = CGAffineTransform.identity
         
-        //toViewSnapShot.transform = isPresented ? beginState : endState
+        toViewSnapShot.transform = isPresented ? beginState : endState
         
         toView.isHidden = true
         
         containerView.addSubview(toView)
-       // containerView.addSubview(toViewSnapShot)
+        containerView.addSubview(toViewSnapShot)
         
         let duration = transitionDuration(using: transitionContext)
         
         UIView.animate(withDuration: duration, animations: { [unowned self] in
             
             if self.isPresented {
-             //   toViewSnapShot.transform = .identity
+                toViewSnapShot.transform = .identity
             }
             else {
-             //   fromView.transform = beginState
-                self.cell.frame = frame
+                fromView.transform = beginState
             }
             
         }) { (isFinished) in
             
             toView.isHidden = false
-          //  toViewSnapShot.removeFromSuperview()
+            toViewSnapShot.removeFromSuperview()
             transitionContext.completeTransition(isFinished)
         }
-        
     }
 }

@@ -62,7 +62,6 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
         segue.destination.transitioningDelegate = self
         if segue.identifier == "Detail" {
             let secondVC = segue.destination as! ViewController
-            secondVC.modalPresentationStyle = .custom
 
             if let image = sender as? UIImage {
                 secondVC.image = image
