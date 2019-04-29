@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class CustomTransitionsManager: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
+class CustomTransitionsManager: NSObject, UIViewControllerAnimatedTransitioning {
     
     var isPresented = false
+    var cell: UICollectionViewCell!
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.8
@@ -20,26 +21,51 @@ class CustomTransitionsManager: NSObject, UIViewControllerAnimatedTransitioning,
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         guard let toView = transitionContext.view(forKey: .to),
-            let fromView = transitionContext.view(forKey: .from),
-            let toViewSnapShot = toView.snapshotView(afterScreenUpdates: true)
+            let fromView = transitionContext.view(forKey: .from)
             else {
                 
                 transitionContext.completeTransition(false)
                 return
         }
-    }
-    
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        isPresented = true
+        let containerView = transitionContext.containerView
         
-        return self
-    }
-    
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        var frame = cell.frame
+        frame.origin.y = 0.5
+        frame.origin.x = 0.5
+        frame.size.width = containerView.frame.size.width
+        frame.size.height = containerView.frame.size.width
         
-        isPresented = false
+        containerView.backgroundColor = .white
         
-        return self
+        let beginState = CGAffineTransform(scaleX: 0, y: 0)
+        let endState = CGAffineTransform.identity
+        
+        //toViewSnapShot.transform = isPresented ? beginState : endState
+        
+        toView.isHidden = true
+        
+        containerView.addSubview(toView)
+       // containerView.addSubview(toViewSnapShot)
+        
+        let duration = transitionDuration(using: transitionContext)
+        
+        UIView.animate(withDuration: duration, animations: { [unowned self] in
+            
+            if self.isPresented {
+             //   toViewSnapShot.transform = .identity
+            }
+            else {
+             //   fromView.transform = beginState
+                self.cell.frame = frame
+            }
+            
+        }) { (isFinished) in
+            
+            toView.isHidden = false
+          //  toViewSnapShot.removeFromSuperview()
+            transitionContext.completeTransition(isFinished)
+        }
+        
     }
 }

@@ -12,7 +12,7 @@ class ViewController: UIViewController {
   
     @IBOutlet weak var imageView: UIImageView!
     var image: UIImage!
-    let transition = CollectionViewController()
+    let transition = CustomTransitionsManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,16 +35,8 @@ class ViewController: UIViewController {
         self.imageView.image = self.image
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        //segue.destination.transitioningDelegate = transition
-        
-        if segue.identifier == "detail" {
-            
-            if let image = sender as? UIImage {
-                self.imageView.image = image
-            }
-        }
+    @IBAction func didPressedBack(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToViewController", sender: nil)
     }
 }
 

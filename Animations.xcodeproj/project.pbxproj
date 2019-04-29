@@ -15,6 +15,26 @@
 		52A6B674226B5F97004861B3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B673226B5F97004861B3 /* CollectionViewCell.swift */; };
 		52A6B676226B5FAB004861B3 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B675226B5FAB004861B3 /* CollectionViewController.swift */; };
 		52A6B678226B5FCD004861B3 /* CustomTransitionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A6B677226B5FCD004861B3 /* CustomTransitionsManager.swift */; };
+		52EDD7EE2274691E0052AB8C /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7D02274691E0052AB8C /* SecondPresenter.swift */; };
+		52EDD7EF2274691E0052AB8C /* SecondViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7D22274691E0052AB8C /* SecondViewInput.swift */; };
+		52EDD7F02274691E0052AB8C /* SecondViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7D32274691E0052AB8C /* SecondViewOutput.swift */; };
+		52EDD7F22274691E0052AB8C /* SecondModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7D52274691E0052AB8C /* SecondModuleConfigurator.swift */; };
+		52EDD7F32274691E0052AB8C /* SecondInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7D72274691E0052AB8C /* SecondInteractorInput.swift */; };
+		52EDD7F42274691E0052AB8C /* SecondInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7D82274691E0052AB8C /* SecondInteractorOutput.swift */; };
+		52EDD7F52274691E0052AB8C /* SecondInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7D92274691E0052AB8C /* SecondInteractor.swift */; };
+		52EDD7F62274691E0052AB8C /* SecondRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7DB2274691E0052AB8C /* SecondRouter.swift */; };
+		52EDD7F72274691E0052AB8C /* SecondRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7DC2274691E0052AB8C /* SecondRouterInput.swift */; };
+		52EDD7F82274691E0052AB8C /* SecondRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7DD2274691E0052AB8C /* SecondRouterOutput.swift */; };
+		52EDD7F92274691E0052AB8C /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7E02274691E0052AB8C /* FirstPresenter.swift */; };
+		52EDD7FA2274691E0052AB8C /* FirstModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7E12274691E0052AB8C /* FirstModuleConfigurator.swift */; };
+		52EDD7FC2274691E0052AB8C /* FirstViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7E42274691E0052AB8C /* FirstViewInput.swift */; };
+		52EDD7FD2274691E0052AB8C /* FirstViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7E52274691E0052AB8C /* FirstViewOutput.swift */; };
+		52EDD7FE2274691E0052AB8C /* FirstInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7E72274691E0052AB8C /* FirstInteractorOutput.swift */; };
+		52EDD7FF2274691E0052AB8C /* FirstInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7E82274691E0052AB8C /* FirstInteractor.swift */; };
+		52EDD8002274691E0052AB8C /* FirstInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7E92274691E0052AB8C /* FirstInteractorInput.swift */; };
+		52EDD8012274691E0052AB8C /* FirstRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7EB2274691E0052AB8C /* FirstRouterInput.swift */; };
+		52EDD8022274691E0052AB8C /* FirstRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7EC2274691E0052AB8C /* FirstRouter.swift */; };
+		52EDD8032274691E0052AB8C /* FirstRouterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EDD7ED2274691E0052AB8C /* FirstRouterOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +48,26 @@
 		52A6B673226B5F97004861B3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		52A6B675226B5FAB004861B3 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		52A6B677226B5FCD004861B3 /* CustomTransitionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionsManager.swift; sourceTree = "<group>"; };
+		52EDD7D02274691E0052AB8C /* SecondPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
+		52EDD7D22274691E0052AB8C /* SecondViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewInput.swift; sourceTree = "<group>"; };
+		52EDD7D32274691E0052AB8C /* SecondViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewOutput.swift; sourceTree = "<group>"; };
+		52EDD7D52274691E0052AB8C /* SecondModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondModuleConfigurator.swift; sourceTree = "<group>"; };
+		52EDD7D72274691E0052AB8C /* SecondInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInteractorInput.swift; sourceTree = "<group>"; };
+		52EDD7D82274691E0052AB8C /* SecondInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInteractorOutput.swift; sourceTree = "<group>"; };
+		52EDD7D92274691E0052AB8C /* SecondInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondInteractor.swift; sourceTree = "<group>"; };
+		52EDD7DB2274691E0052AB8C /* SecondRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondRouter.swift; sourceTree = "<group>"; };
+		52EDD7DC2274691E0052AB8C /* SecondRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondRouterInput.swift; sourceTree = "<group>"; };
+		52EDD7DD2274691E0052AB8C /* SecondRouterOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondRouterOutput.swift; sourceTree = "<group>"; };
+		52EDD7E02274691E0052AB8C /* FirstPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
+		52EDD7E12274691E0052AB8C /* FirstModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstModuleConfigurator.swift; sourceTree = "<group>"; };
+		52EDD7E42274691E0052AB8C /* FirstViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewInput.swift; sourceTree = "<group>"; };
+		52EDD7E52274691E0052AB8C /* FirstViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewOutput.swift; sourceTree = "<group>"; };
+		52EDD7E72274691E0052AB8C /* FirstInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstInteractorOutput.swift; sourceTree = "<group>"; };
+		52EDD7E82274691E0052AB8C /* FirstInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstInteractor.swift; sourceTree = "<group>"; };
+		52EDD7E92274691E0052AB8C /* FirstInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstInteractorInput.swift; sourceTree = "<group>"; };
+		52EDD7EB2274691E0052AB8C /* FirstRouterInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRouterInput.swift; sourceTree = "<group>"; };
+		52EDD7EC2274691E0052AB8C /* FirstRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRouter.swift; sourceTree = "<group>"; };
+		52EDD7ED2274691E0052AB8C /* FirstRouterOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRouterOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +100,117 @@
 		52A6B660226B5B9A004861B3 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				52A6B677226B5FCD004861B3 /* CustomTransitionsManager.swift */,
+				52EDD7DE2274691E0052AB8C /* First */,
+				52EDD7CE2274691E0052AB8C /* Second */,
 				52A6B661226B5B9A004861B3 /* AppDelegate.swift */,
-				52A6B663226B5B9A004861B3 /* ViewController.swift */,
 				52A6B665226B5B9A004861B3 /* Main.storyboard */,
 				52A6B668226B5B9C004861B3 /* Assets.xcassets */,
 				52A6B66A226B5B9C004861B3 /* LaunchScreen.storyboard */,
 				52A6B66D226B5B9C004861B3 /* Info.plist */,
-				52A6B673226B5F97004861B3 /* CollectionViewCell.swift */,
-				52A6B675226B5FAB004861B3 /* CollectionViewController.swift */,
-				52A6B677226B5FCD004861B3 /* CustomTransitionsManager.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		52EDD7CE2274691E0052AB8C /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7CF2274691E0052AB8C /* Presenter */,
+				52EDD7D12274691E0052AB8C /* View */,
+				52EDD7D52274691E0052AB8C /* SecondModuleConfigurator.swift */,
+				52EDD7D62274691E0052AB8C /* Interactor */,
+				52EDD7DA2274691E0052AB8C /* Router */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		52EDD7CF2274691E0052AB8C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7D02274691E0052AB8C /* SecondPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		52EDD7D12274691E0052AB8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7D22274691E0052AB8C /* SecondViewInput.swift */,
+				52A6B663226B5B9A004861B3 /* ViewController.swift */,
+				52EDD7D32274691E0052AB8C /* SecondViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52EDD7D62274691E0052AB8C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7D72274691E0052AB8C /* SecondInteractorInput.swift */,
+				52EDD7D82274691E0052AB8C /* SecondInteractorOutput.swift */,
+				52EDD7D92274691E0052AB8C /* SecondInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		52EDD7DA2274691E0052AB8C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7DB2274691E0052AB8C /* SecondRouter.swift */,
+				52EDD7DC2274691E0052AB8C /* SecondRouterInput.swift */,
+				52EDD7DD2274691E0052AB8C /* SecondRouterOutput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		52EDD7DE2274691E0052AB8C /* First */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7DF2274691E0052AB8C /* Presenter */,
+				52EDD7E12274691E0052AB8C /* FirstModuleConfigurator.swift */,
+				52EDD7E22274691E0052AB8C /* View */,
+				52EDD7E62274691E0052AB8C /* Interactor */,
+				52EDD7EA2274691E0052AB8C /* Router */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		52EDD7DF2274691E0052AB8C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7E02274691E0052AB8C /* FirstPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		52EDD7E22274691E0052AB8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52A6B673226B5F97004861B3 /* CollectionViewCell.swift */,
+				52A6B675226B5FAB004861B3 /* CollectionViewController.swift */,
+				52EDD7E42274691E0052AB8C /* FirstViewInput.swift */,
+				52EDD7E52274691E0052AB8C /* FirstViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52EDD7E62274691E0052AB8C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7E72274691E0052AB8C /* FirstInteractorOutput.swift */,
+				52EDD7E82274691E0052AB8C /* FirstInteractor.swift */,
+				52EDD7E92274691E0052AB8C /* FirstInteractorInput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		52EDD7EA2274691E0052AB8C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				52EDD7EB2274691E0052AB8C /* FirstRouterInput.swift */,
+				52EDD7EC2274691E0052AB8C /* FirstRouter.swift */,
+				52EDD7ED2274691E0052AB8C /* FirstRouterOutput.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +284,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EDD8002274691E0052AB8C /* FirstInteractorInput.swift in Sources */,
 				52A6B676226B5FAB004861B3 /* CollectionViewController.swift in Sources */,
+				52EDD7F82274691E0052AB8C /* SecondRouterOutput.swift in Sources */,
+				52EDD7F02274691E0052AB8C /* SecondViewOutput.swift in Sources */,
 				52A6B664226B5B9A004861B3 /* ViewController.swift in Sources */,
+				52EDD7F52274691E0052AB8C /* SecondInteractor.swift in Sources */,
+				52EDD7FA2274691E0052AB8C /* FirstModuleConfigurator.swift in Sources */,
+				52EDD7FF2274691E0052AB8C /* FirstInteractor.swift in Sources */,
+				52EDD7FE2274691E0052AB8C /* FirstInteractorOutput.swift in Sources */,
+				52EDD7FC2274691E0052AB8C /* FirstViewInput.swift in Sources */,
+				52EDD7F62274691E0052AB8C /* SecondRouter.swift in Sources */,
+				52EDD7F32274691E0052AB8C /* SecondInteractorInput.swift in Sources */,
+				52EDD8022274691E0052AB8C /* FirstRouter.swift in Sources */,
+				52EDD8032274691E0052AB8C /* FirstRouterOutput.swift in Sources */,
+				52EDD7F72274691E0052AB8C /* SecondRouterInput.swift in Sources */,
+				52EDD7EF2274691E0052AB8C /* SecondViewInput.swift in Sources */,
+				52EDD7F92274691E0052AB8C /* FirstPresenter.swift in Sources */,
+				52EDD7EE2274691E0052AB8C /* SecondPresenter.swift in Sources */,
+				52EDD7F22274691E0052AB8C /* SecondModuleConfigurator.swift in Sources */,
 				52A6B662226B5B9A004861B3 /* AppDelegate.swift in Sources */,
+				52EDD7FD2274691E0052AB8C /* FirstViewOutput.swift in Sources */,
+				52EDD8012274691E0052AB8C /* FirstRouterInput.swift in Sources */,
 				52A6B678226B5FCD004861B3 /* CustomTransitionsManager.swift in Sources */,
 				52A6B674226B5F97004861B3 /* CollectionViewCell.swift in Sources */,
+				52EDD7F42274691E0052AB8C /* SecondInteractorOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
