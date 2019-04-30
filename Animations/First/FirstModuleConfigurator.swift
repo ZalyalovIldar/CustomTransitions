@@ -23,10 +23,8 @@ class FirstModuleConfigurator: NSObject {
         
         let viewController = self.viewController as! CollectionViewController
         let presenter = FirstPresenter()
-        let router = FirstRouter()
         
         viewController.presenter = presenter
-        presenter.router = router
-        router.view = viewController
+        presenter.view = viewController
     }
 }

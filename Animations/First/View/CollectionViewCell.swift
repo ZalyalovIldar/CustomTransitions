@@ -12,6 +12,9 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    /// Инициализация изображения
+    ///
+    /// - Parameter image: изображение
     func setImage(image: UIImage) {
         imageView.image = image
     }

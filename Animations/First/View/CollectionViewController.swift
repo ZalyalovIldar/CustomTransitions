@@ -8,36 +8,43 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
-class CollectionViewController: UICollectionViewController, UIViewControllerTransitioningDelegate {
+enum AllConstants: String {
     
-    let images = [UIImage(named: "img1"), UIImage(named: "img2"), UIImage(named: "img3"), UIImage(named: "img4"), UIImage(named: "img5"), UIImage(named: "img1")]
-    var tap: CGPoint!
+    case img1 = "img1",
+    img2 = "img2",
+    img3 = "img3",
+    img4 = "img4",
+    main = "Main",
+    detail = "DetailVC",
+    unwindToViewController = "unwindToViewController",
+    reuseIdentifier = "Cell"
+}
+
+class CollectionViewController: UICollectionViewController, UIViewControllerTransitioningDelegate, FirstViewInput {
+    
+    let images = [UIImage(named: AllConstants.img1.rawValue), UIImage(named: AllConstants.img2.rawValue), UIImage(named: AllConstants.img2.rawValue), UIImage(named: AllConstants.img3.rawValue), UIImage(named: AllConstants.img4.rawValue), UIImage(named: AllConstants.img1.rawValue)]
     let transitions = CustomTransitionsManager()
-    var selectedImage: UIImage!
     var presenter: FirstViewOutput!
     var isPresented = false
+    var cell = UICollectionViewCell()
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    // MARK: UICollectionViewDataSource
 
+    //MARK: - Методы CollectionView
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return images.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CollectionViewCell
+        
+        let cell: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: AllConstants.reuseIdentifier.rawValue, for: indexPath) as! CollectionViewCell
         
         cell.setImage(image: images[indexPath.row]!)
         
@@ -46,31 +53,33 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell = collectionView.cellForItem(at: indexPath)
+        let mainStoryboard = UIStoryboard(name: AllConstants.main.rawValue, bundle: nil)
+        let presentingController = self
+        let controllerToPresent = mainStoryboard.instantiateViewController(withIdentifier: AllConstants.detail.rawValue) as! ViewController
         
-        transitions.cell = cell as? CollectionViewCell
-        transitions.frame = cell?.frame
-        if let image = images[indexPath.row] {
-            presenter.showSecondVC(with: image)
-            transitions.image.image = image
-        }
-    }
-    
-    // MARK: UIViewController methods
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        segue.destination.transitioningDelegate = self
-        if segue.identifier == "Detail" {
-            let secondVC = segue.destination as! ViewController
+        self.presenter.ifLetCell(collectionView: collectionView, indexPath: indexPath, transitions: self.transitions)
+        self.presenter.ifLetImage(images: images, indexPath: indexPath, controllerToPresent: controllerToPresent, transitions: transitions)
 
-            if let image = sender as? UIImage {
-                secondVC.image = image
-                
-            }
-        }
+        controllerToPresent.modalPresentationStyle = .overCurrentContext
+        controllerToPresent.modalTransitionStyle = .crossDissolve
+        controllerToPresent.modalPresentationCapturesStatusBarAppearance = false
+        presentingController.definesPresentationContext = true
+        controllerToPresent.transitioningDelegate = self
+        
+        presentingController.present(controllerToPresent, animated: true, completion: {
+            self.cell.isHidden = true
+        })
     }
     
+    //MARK: - UIViewControllerTransitioningDelegate
+    
+    /// Метод, который говорит, откуда брать анимацию перехода
+    ///
+    /// - Parameters:
+    ///   - presented: VC, с которого происходит переход
+    ///   - presenting: VC, в который происходит переход
+    ///   - source: VC, который вызвал present
+    /// - Returns: Класс, который будет выполнять анимацию
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         isPresented = true
@@ -79,7 +88,10 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
         return transitions
     }
     
-    
+    /// Метод, который говорит, откуда брать анимацию возвращения
+    ///
+    /// - Parameter dismissed: VC объекта, который будет после нажатия на dissmiss
+    /// - Returns: Класс, который будет выполнять анимацию
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         isPresented = false
@@ -88,17 +100,11 @@ class CollectionViewController: UICollectionViewController, UIViewControllerTran
         return transitions
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        let touch: UITouch! = touches.first! as UITouch
-        transitions.touch = touch.location(in: self.view)
+    func setCell(cell: UICollectionViewCell) {
+        self.cell = cell
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-        var touch : UITouch! =  touches.first! as UITouch
-        transitions.touch = touch.location(in: self.view)
-    }
+    //MARK: - unwindToViewController
     
     @IBAction func unwindToViewController(_ sender: UIStoryboardSegue) { }
 }

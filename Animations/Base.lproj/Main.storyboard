@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="njw-2u-v0Z">
             <objects>
-                <collectionViewController id="iRV-Ix-8gr" customClass="CollectionViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="collectionVC" id="iRV-Ix-8gr" customClass="CollectionViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="98f-Kl-I1x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,7 +65,7 @@
                     </connections>
                 </customObject>
             </objects>
-            <point key="canvasLocation" x="2279.1999999999998" y="88.605697151424295"/>
+            <point key="canvasLocation" x="3218.4000000000001" y="88.605697151424295"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vI8-Oq-SDV">
@@ -121,7 +121,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGb-dx-bpk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Kqr-2U-4yQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3208.8000000000002" y="73.313343328335833"/>
+            <point key="canvasLocation" x="4148" y="73.313343328335833"/>
         </scene>
     </scenes>
 </document>

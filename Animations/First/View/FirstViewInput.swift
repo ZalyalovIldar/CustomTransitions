@@ -7,7 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 protocol FirstViewInput: AnyObject {
     
+    /// инициализация ячейки
+    ///
+    /// - Parameter cell: ячейка
+    func setCell(cell: UICollectionViewCell)
 }
