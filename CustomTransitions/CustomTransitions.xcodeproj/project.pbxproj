@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B2045E422881F50006B673C /* CustomTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2045E322881F50006B673C /* CustomTransitionManager.swift */; };
 		1B36A31F2268742B0029EC4D /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B36A3182268742B0029EC4D /* MainScreenPresenter.swift */; };
 		1B36A3202268742B0029EC4D /* MainScreenModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B36A3192268742B0029EC4D /* MainScreenModuleConfigurator.swift */; };
 		1B36A3212268742B0029EC4D /* MainScreenViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B36A31B2268742B0029EC4D /* MainScreenViewOutput.swift */; };
@@ -21,7 +22,6 @@
 		1B36A3692268926E0029EC4D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B36A3642268926E0029EC4D /* DetailViewController.swift */; };
 		1B36A36A2268926E0029EC4D /* DetailModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B36A3652268926E0029EC4D /* DetailModuleConfigurator.swift */; };
 		1B36A36E2271B1270029EC4D /* ToViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B36A36D2271B1270029EC4D /* ToViewTransition.swift */; };
-		1B46D47E227C303600E05CE3 /* CustomTransitionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B46D47D227C303600E05CE3 /* CustomTransitionsManager.swift */; };
 		1BB7B68622649F49007180F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7B68522649F49007180F6 /* AppDelegate.swift */; };
 		1BB7B68B22649F49007180F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BB7B68922649F49007180F6 /* Main.storyboard */; };
 		1BB7B68E22649F49007180F6 /* CustomTransitions.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BB7B68C22649F49007180F6 /* CustomTransitions.xcdatamodeld */; };
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B2045E322881F50006B673C /* CustomTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionManager.swift; sourceTree = "<group>"; };
 		1B36A3182268742B0029EC4D /* MainScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		1B36A3192268742B0029EC4D /* MainScreenModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenModuleConfigurator.swift; sourceTree = "<group>"; };
 		1B36A31B2268742B0029EC4D /* MainScreenViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenViewOutput.swift; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		1B36A3642268926E0029EC4D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1B36A3652268926E0029EC4D /* DetailModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModuleConfigurator.swift; sourceTree = "<group>"; };
 		1B36A36D2271B1270029EC4D /* ToViewTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToViewTransition.swift; sourceTree = "<group>"; };
-		1B46D47D227C303600E05CE3 /* CustomTransitionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTransitionsManager.swift; path = ../../../../../.Trash/CustomTransitionsManager.swift; sourceTree = "<group>"; };
 		1BB7B68222649F49007180F6 /* CustomTransitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BB7B68522649F49007180F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BB7B68A22649F49007180F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 		1B36A324226876350029EC4D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				1B46D47D227C303600E05CE3 /* CustomTransitionsManager.swift */,
 				1B36A3252268764A0029EC4D /* DataManager.swift */,
 				1B36A36D2271B1270029EC4D /* ToViewTransition.swift */,
+				1B2045E322881F50006B673C /* CustomTransitionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -364,7 +364,6 @@
 				1B36A3212268742B0029EC4D /* MainScreenViewOutput.swift in Sources */,
 				1B36A3662268926E0029EC4D /* DetailPresenter.swift in Sources */,
 				1BB7B68E22649F49007180F6 /* CustomTransitions.xcdatamodeld in Sources */,
-				1B46D47E227C303600E05CE3 /* CustomTransitionsManager.swift in Sources */,
 				1B36A3672268926E0029EC4D /* DetailViewInput.swift in Sources */,
 				1BB7B68622649F49007180F6 /* AppDelegate.swift in Sources */,
 				1B36A36E2271B1270029EC4D /* ToViewTransition.swift in Sources */,
@@ -372,6 +371,7 @@
 				1B36A3222268742B0029EC4D /* MainScreenViewInput.swift in Sources */,
 				1B36A3202268742B0029EC4D /* MainScreenModuleConfigurator.swift in Sources */,
 				1B36A3682268926E0029EC4D /* DetailViewOutput.swift in Sources */,
+				1B2045E422881F50006B673C /* CustomTransitionManager.swift in Sources */,
 				1B36A32822687D150029EC4D /* Classes.swift in Sources */,
 				1B36A3692268926E0029EC4D /* DetailViewController.swift in Sources */,
 			);
